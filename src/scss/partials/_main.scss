@@ -1,0 +1,22 @@
+main {
+    background: $bg-main;
+    height: 100vh;
+
+    .container{
+        width: 70%;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        padding: 50px 0;
+        .disk {
+            flex-basis: calc(100% / 3 - 15px);
+            margin-bottom: 15px;
+            background-color: $bg-disk;
+            color: white;
+            padding: 20px;
+            .disk-cover {
+               height: 200px;
+               margin-bottom: 10px;
+            }
+        }
+    }
+}

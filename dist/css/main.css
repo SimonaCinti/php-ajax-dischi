@@ -55,6 +55,10 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Andika New Basic", sans-serif;
+}
+
 header {
   background-color: #132431;
 }
@@ -71,4 +75,26 @@ header .logo-text {
 header .logo img,
 header .logo-text img {
   height: 100%;
+}
+
+main {
+  background: #182d3d;
+  height: 100vh;
+}
+main .container {
+  width: 70%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  padding: 50px 0;
+}
+main .container .disk {
+  flex-basis: calc(100% / 3 - 15px);
+  margin-bottom: 15px;
+  background-color: #000000;
+  color: white;
+  padding: 20px;
+}
+main .container .disk .disk-cover {
+  height: 200px;
+  margin-bottom: 10px;
 }
