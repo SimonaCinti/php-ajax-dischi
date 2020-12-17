@@ -1,3 +1,74 @@
-body {
-  background: #675d5d;
+/* Flex Utilities */
+.flex {
+  display: flex;
+}
+
+.flex.column {
+  flex-direction: column;
+}
+
+.flex.row {
+  flex-flow: row;
+}
+
+/* Flex Justify-Content */
+.flex.justify-center {
+  justify-content: center;
+}
+
+.flex.justify-between {
+  justify-content: space-between;
+}
+
+.flex.justify-start {
+  justify-content: flex-start;
+}
+
+.flex.justify-around {
+  justify-content: space-around;
+}
+
+.flex.align-center {
+  align-items: center;
+}
+
+/* Flex Items */
+.self-center {
+  align-self: center;
+}
+
+.grow-1 {
+  flex-grow: 1;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.h100 {
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #132431;
+}
+header .container {
+  width: 90%;
+  height: 100px;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+header .logo,
+header .logo-text {
+  height: 100%;
+}
+header .logo img,
+header .logo-text img {
+  height: 100%;
 }

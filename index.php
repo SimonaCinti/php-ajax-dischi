@@ -9,12 +9,18 @@
 </head>
 <body>
     <div id="app">
-        <?php $lorem = 'lorem' ?>
-        <h1> <?php echo $lorem ?></h1>
-        <h2>{{appTitle}}</h2>
+        <header>
+            <nav class="container flex justify-between">
+               <div class="logo">
+                   <img src="./img/logo.png" alt="logo">
+               </div>
+               <div class="logo-text">
+                   <img src="./img/booltify.png" alt="">
+               </div>
+            </nav> 
+        </header>
     </div>
-    <?php include __DIR__ . '/scripts/database.php';
-    var_dump ($database) ?>
+
     
 </body>
 <!-- JS -->
