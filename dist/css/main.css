@@ -49,6 +49,10 @@
   height: 100%;
 }
 
+.hv100 {
+  height: 100vh;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -79,6 +83,7 @@ header .logo-text img {
 
 main {
   background: #182d3d;
+  height: 100%;
 }
 main .container {
   width: 70%;

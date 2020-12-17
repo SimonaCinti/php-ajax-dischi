@@ -15,7 +15,7 @@
 <?php include __DIR__ . '/scripts/database.php' ?>
 
 <body>
-    <div id="app">
+    <div id="app" class="hv100">
         <!-- Header -->
         <header>
             <nav class="container flex justify-between">
