@@ -41,7 +41,7 @@
                     <div class="disk-cover">
                         <img class="h100" :src="cd.poster" alt="">
                     </div>
-                    <h4> {{cd.title}} </h4>
+                    <h4> <i class="fas fa-music"></i> {{cd.title}} </h4>
                     <p> {{cd.author}}</p>
                     <p> {{cd.year}}</p>
                     <p>{{cd.genre}}</p>
