@@ -30,18 +30,15 @@
         <!-- Main -->
         <main>
             <div class="container flex justify-between">
-                <?php foreach ($database as $disk) { ?>
-                    <div class="disk flex column align-center">
-                        <div class="disk-cover">
-                            <img class="h100" src="<?php echo $disk['poster']?>" alt="">
-                        </div>
-                        <h4> <?php echo $disk['title'] ?> </h4>
-                        <p> <?php echo $disk['author'] ?> </p>
-                        <p> <?php echo $disk['year'] ?></p>
-                        <p><?php echo $disk['genre'] ?></p>
+                <div v-for="cd in cds" class="disk flex column align-center">
+                    <div class="disk-cover">
+                        <img class="h100" :src="cd.poster" alt="">
                     </div>
-
-                <?php } ?>
+                    <h4> {{cd.title}} </h4>
+                    <p> {{cd.author}}</p>
+                    <p> {{cd.year}}</p>
+                    <p>{{cd.genre}}</p>
+                </div>
             </div>
         </main>
     </div>
