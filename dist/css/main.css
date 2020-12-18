@@ -83,17 +83,17 @@ header .logo-text img {
 
 main {
   background: #182d3d;
-  height: 100%;
 }
 main .container {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   flex-wrap: wrap;
   padding: 50px 0;
 }
 main .container .disk {
-  flex-basis: calc(100% / 3 - 15px);
+  flex-basis: 25%;
   margin-bottom: 15px;
+  margin-right: 20px;
   background-color: #000000;
   color: white;
   padding: 20px;
@@ -101,4 +101,11 @@ main .container .disk {
 main .container .disk .disk-cover {
   height: 200px;
   margin-bottom: 10px;
+}
+main .select {
+  text-align: center;
+  padding-top: 20px;
+}
+main .select select {
+  width: 100px;
 }

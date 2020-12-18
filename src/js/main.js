@@ -8,7 +8,7 @@ const app = new Vue ({
     data: {
         cds: [],
         genres: [],
-        selectedGen: 'All',
+        selectedGen: 'all',
         dataUrl: window.location.href 
     }, // <<<< End Data
 

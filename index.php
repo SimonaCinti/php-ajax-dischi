@@ -15,7 +15,7 @@
 <?php include __DIR__ . '/scripts/database.php' ?>
 
 <body>
-    <div id="app" class="hv100">
+    <div id="app">
         <!-- Header -->
         <header>
             <nav class="container flex justify-between">
@@ -28,12 +28,14 @@
             </nav>
         </header>
         <!-- Main -->
-        <main>
-            <select v-model="selectedGen" @change="filterGenre">
-                <option value="all">All</option>
-                <option v-for="(item, index) in listGenre(genres)" :value="item">{{item}}</option>
-            </select>
-            <div class="container flex justify-between">
+        <main class="hv100">
+            <div class="select">
+                <select v-model="selectedGen" @change="filterGenre">
+                    <option value="all">All</option>
+                    <option v-for="(item, index) in listGenre(genres)" :value="item">{{item}}</option>
+                </select>
+            </div>
+            <div class="container flex justify-center">
 
                 <div v-for="cd in cds" class="disk flex column align-center">
                     <div class="disk-cover">

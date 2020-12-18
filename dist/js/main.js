@@ -14426,7 +14426,7 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   data: {
     cds: [],
     genres: [],
-    selectedGen: 'All',
+    selectedGen: 'all',
     dataUrl: window.location.href
   },
   // <<<< End Data
