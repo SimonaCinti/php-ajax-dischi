@@ -4,7 +4,7 @@
 
 $filter_genre = [];
 
-if (empty($_GET)) {
+if ((empty($_GET)) || ($_GET['genre'] === 'all')) {
     // empty string check, return database
     $filter_genre = $database;
 } else{
