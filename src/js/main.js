@@ -18,6 +18,7 @@ const app = new Vue ({
         .then(response => {
             // console.log(response.data);
             this.cds = response.data;
+            this.copycds = this.cds
         })
         .catch (error => {
             console.log(error)
@@ -36,8 +37,8 @@ const app = new Vue ({
         // Filtra generi
         filterGenre(){
             axios.get(this.dataUrl + 'scripts/filter-script.php?genre='+ this.selectedGen,)
-                .then(result =>{
-                    console.log(result.data);
+                .then(response =>{
+                    this.cds = (response.data);
                 })
                 .catch(error => {
                     console.log(error);
