@@ -20,4 +20,5 @@ if (empty($_GET)) {
 
 header('Content-Type: application/json');
 echo json_encode($filter_genre);
+
 ?>

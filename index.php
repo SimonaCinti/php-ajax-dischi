@@ -29,7 +29,12 @@
         </header>
         <!-- Main -->
         <main>
+            <select v-model="selectedGen">
+                <option value="all">All</option>
+                <option v-for="item in listgenre(genres)" :value="item">{{item}}</option>
+            </select>
             <div class="container flex justify-between">
+
                 <div v-for="cd in cds" class="disk flex column align-center">
                     <div class="disk-cover">
                         <img class="h100" :src="cd.poster" alt="">

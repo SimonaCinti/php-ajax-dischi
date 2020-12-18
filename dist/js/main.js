@@ -14424,22 +14424,33 @@ __webpack_require__.r(__webpack_exports__);
 var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   el: '#app',
   data: {
-    cds: []
+    cds: [],
+    genres: [],
+    selectedGen: 'All',
+    dataUrl: window.location.href + 'scripts/json-script.php'
   },
   // <<<< End Data
   created: function created() {
     var _this = this;
 
-    // Declare dynamic url for servercall
-    var dataUrl = window.location.href + 'scripts/json-script.php'; // Axios Call
-
-    axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(dataUrl).then(function (response) {
+    // Axios Call
+    axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(this.dataUrl).then(function (response) {
       _this.cds = response.data;
     })["catch"](function (error) {
       console.log(error);
     });
-  } // <<<< End Created
-
+  },
+  // <<<< End Created
+  methods: {
+    // Lista generi
+    listgenre: function listgenre(genres) {
+      this.cds.forEach(function (cd) {
+        if (!genres.includes(cd.genre)) {
+          return genres.push(cd.genre);
+        }
+      });
+    }
+  }
 });
 
 /***/ }),

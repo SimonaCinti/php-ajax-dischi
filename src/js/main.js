@@ -6,19 +6,32 @@ import axios from 'axios';
 const app = new Vue ({
     el: '#app',
     data: {
-        cds: []
+        cds: [],
+        genres: [],
+
+        selectedGen: 'All',
+        dataUrl: window.location.href + 'scripts/json-script.php',
     }, // <<<< End Data
 
     created(){
-        // Declare dynamic url for servercall
-        const dataUrl = window.location.href + 'scripts/json-script.php'
         // Axios Call
-        axios.get(dataUrl)
+        axios.get(this.dataUrl)
         .then(response => {
             this.cds = response.data;
         })
         .catch (error => {
             console.log(error)
         });
-    },  // <<<< End Created
+    }, // <<<< End Created
+
+    methods:{
+        // Lista generi
+        listgenre(genres){
+            this.cds.forEach(cd =>{
+                if(! genres.includes(cd.genre)){
+               return genres.push(cd.genre);}
+            })
+        }
+    },
+
 });
