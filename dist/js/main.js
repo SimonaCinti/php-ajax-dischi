@@ -14437,7 +14437,6 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
     axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(this.dataUrl + 'scripts/json-script.php').then(function (response) {
       // console.log(response.data);
       _this.cds = response.data;
-      _this.copycds = _this.cds;
     })["catch"](function (error) {
       console.log(error);
     });

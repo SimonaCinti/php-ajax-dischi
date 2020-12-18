@@ -18,7 +18,6 @@ const app = new Vue ({
         .then(response => {
             // console.log(response.data);
             this.cds = response.data;
-            this.copycds = this.cds
         })
         .catch (error => {
             console.log(error)
