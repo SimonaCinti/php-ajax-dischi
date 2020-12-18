@@ -14456,7 +14456,11 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
     filterGenre: function filterGenre() {
       var _this2 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(this.dataUrl + 'scripts/filter-script.php?genre=' + this.selectedGen).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(this.dataUrl + 'scripts/filter-script.php', {
+        params: {
+          genre: this.selectedGen
+        }
+      }).then(function (response) {
         _this2.cds = response.data;
       })["catch"](function (error) {
         console.log(error);

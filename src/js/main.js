@@ -35,7 +35,11 @@ const app = new Vue ({
         },
         // Filtra generi
         filterGenre(){
-            axios.get(this.dataUrl + 'scripts/filter-script.php?genre='+ this.selectedGen,)
+            axios.get(this.dataUrl + 'scripts/filter-script.php',{
+                params: {
+                    genre: this.selectedGen,
+                } 
+            })
                 .then(response =>{
                     this.cds = (response.data);
                 })
