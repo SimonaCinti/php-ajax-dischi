@@ -28,7 +28,7 @@
             </nav>
         </header>
         <!-- Main -->
-        <main class="hv100">
+        <main>
             <div class="select">
                 <select v-model="selectedGen" @change="filterGenre">
                     <option value="all">All</option>
