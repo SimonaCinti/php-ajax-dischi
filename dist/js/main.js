@@ -14430,10 +14430,10 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   created: function created() {
     var _this = this;
 
-    //! Chiamata per il server
-    // axios.get('http://localhost/php-ajax-dischi/scripts/json-script.php')
-    //! Chiamata per il server con browserSync
-    axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('http://localhost:3000/php-ajax-dischi/scripts/json-script.php').then(function (response) {
+    // Declare dynamic url for servercall
+    var dataUrl = window.location.href + 'scripts/json-script.php'; // Axios Call
+
+    axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(dataUrl).then(function (response) {
       _this.cds = response.data;
     })["catch"](function (error) {
       console.log(error);

@@ -10,16 +10,15 @@ const app = new Vue ({
     }, // <<<< End Data
 
     created(){
-        //! Chiamata per il server
-        // axios.get('http://localhost/php-ajax-dischi/scripts/json-script.php')
-        //! Chiamata per il server con browserSync
-        axios.get('http://localhost:3000/php-ajax-dischi/scripts/json-script.php')
+        // Declare dynamic url for servercall
+        const dataUrl = window.location.href + 'scripts/json-script.php'
+        // Axios Call
+        axios.get(dataUrl)
         .then(response => {
             this.cds = response.data;
         })
         .catch (error => {
             console.log(error)
         });
-
-    } // <<<< End Created
+    },  // <<<< End Created
 });
