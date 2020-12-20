@@ -17,6 +17,7 @@ mix.js('src/js/main.js', 'dist/js/')
         proxy: 'http://localhost/php-ajax-dischi/',
         watch: true,
         files: ['./**/*.css', './**/*.js', './**/*.+(html|php)'],
+        tunnel: true, //for mobile
     })
     .options({
         processCssUrls: false,
