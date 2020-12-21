@@ -17,7 +17,8 @@ const app = new Vue ({
         axios.get(this.dataUrl + 'scripts/json-script.php',)
         .then(response => {
             // console.log(response.data);
-            this.cds = response.data;
+            this.cds = response.data.albums;
+            this.genres = response.data.genres
         })
         .catch (error => {
             console.log(error)
@@ -25,14 +26,6 @@ const app = new Vue ({
     }, // <<<< End Created
 
     methods:{
-        // Lista generi
-        listGenre(genres){
-            this.cds.forEach(cd =>{
-                if(! genres.includes(cd.genre)){
-               return genres.push(cd.genre);}
-            })
-           return genres; 
-        },
         // Filtra generi
         filterGenre(){
             axios.get(this.dataUrl + 'scripts/json-script.php',{
@@ -41,7 +34,8 @@ const app = new Vue ({
                 } 
             })
                 .then(response =>{
-                    this.cds = (response.data);
+                    this.cds = response.data.albums;
+                    // this.genres = response.data.genres;
                 })
                 .catch(error => {
                     console.log(error);

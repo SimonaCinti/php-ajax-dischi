@@ -32,7 +32,7 @@
             <div class="select">
                 <select v-model="selectedGen" @change="filterGenre">
                     <option value="all">All</option>
-                    <option v-for="(item, index) in listGenre(genres)" :value="item">{{item}}</option>
+                    <option v-for="genre in genres" :value="genre">{{genre}}</option>
                 </select>
             </div>
             <div class="container flex justify-center">

@@ -14436,22 +14436,14 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
     // Axios Call
     axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(this.dataUrl + 'scripts/json-script.php').then(function (response) {
       // console.log(response.data);
-      _this.cds = response.data;
+      _this.cds = response.data.albums;
+      _this.genres = response.data.genres;
     })["catch"](function (error) {
       console.log(error);
     });
   },
   // <<<< End Created
   methods: {
-    // Lista generi
-    listGenre: function listGenre(genres) {
-      this.cds.forEach(function (cd) {
-        if (!genres.includes(cd.genre)) {
-          return genres.push(cd.genre);
-        }
-      });
-      return genres;
-    },
     // Filtra generi
     filterGenre: function filterGenre() {
       var _this2 = this;
@@ -14461,7 +14453,7 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
           genre: this.selectedGen
         }
       }).then(function (response) {
-        _this2.cds = response.data;
+        _this2.cds = response.data.albums; // this.genres = response.data.genres;
       })["catch"](function (error) {
         console.log(error);
       });
